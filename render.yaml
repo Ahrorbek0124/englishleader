@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: englishleader-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: BOT_TOKEN
+        sync: false
